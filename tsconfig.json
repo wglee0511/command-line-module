@@ -5,7 +5,7 @@
     "allowJs": true,
     "noImplicitThis": false,
     "typeRoots": ["./@types", "./node_modules/@types"],
-    // "lib": ["esnext", "es6", "es2017"],
+    "lib": ["esnext", "es6", "es2017"],
     "moduleResolution": "node",
     "noEmit": true,
     "target": "esnext",

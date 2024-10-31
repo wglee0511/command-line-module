@@ -4,19 +4,23 @@
   "description": "practice javascript / typescript",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' -r tsconfig-paths/register src/index.ts"
   },
   "author": "Wongyo Lee <ranazang@naver.com>",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "inquirer": "^12.0.1",
+    "lodash": "^4.17.21",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/node": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@types/node": "^22.8.1",
+    "@types/inquirer": "^9.0.7",
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.8.5",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.57.1",
@@ -28,5 +32,13 @@
     "prettier-eslint": "^16.3.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      "src"
+    ],
+    "ext": ".json,.ts,.env",
+    "stdin": false
   }
 }

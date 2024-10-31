@@ -1,3 +1,3 @@
-import inquirer from "./lib/inquirer";
+import { startMain } from './apps/main';
 
-inquirer;
+startMain();
